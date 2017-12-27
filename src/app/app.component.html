@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<md-toolbar color="primary">
+  Github {{title}}
+</md-toolbar>
+
+<section>
+  <md-input-container>
+    <input mdInput placeholder="search" type="search" [(ngModel)]="searchTerm" (ngModelChange)="newSearch(searchTerm)">
+  </md-input-container>
+
+  <div *ngFor="let result of results | async ">
+    {{result}}
+  </div>
+</section>
